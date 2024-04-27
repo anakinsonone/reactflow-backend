@@ -2,13 +2,10 @@ import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import mongoose, { mongo } from "mongoose";
-import dotenv from "dotenv";
 import multer, { Multer } from "multer";
 
 import { MONGODB_CONNECTION_URI } from "./config";
 import { WorkflowSchema } from "./schemas/index";
-
-dotenv.config();
 
 const app: Express = express();
 const upload: Multer = multer();
