@@ -1,2 +1,6 @@
+## project related ignores
 node_modules/
+.env
+
+## editor related ignores
 *.vim
