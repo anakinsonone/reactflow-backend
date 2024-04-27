@@ -25,6 +25,7 @@ const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
+// Add router to server
 app.use("/api/workflows", WorkflowRouter);
 
 app.listen(port, () => {
