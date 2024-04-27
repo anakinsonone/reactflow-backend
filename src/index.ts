@@ -3,11 +3,10 @@ import cors from "cors";
 import express, { Express } from "express";
 import mongoose from "mongoose";
 
-import { MONGODB_CONNECTION_URI } from "./config";
+import { MONGODB_CONNECTION_URI, port } from "./config";
 import WorkflowRoutes from "./routes/WorkflowRoutes";
 
 const app: Express = express();
-const port = 8000;
 
 app.use(bodyParser.json());
 app.use(cors());
