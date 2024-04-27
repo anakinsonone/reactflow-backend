@@ -4,7 +4,7 @@ import express, { Express } from "express";
 import mongoose from "mongoose";
 
 import { MONGODB_CONNECTION_URI, port } from "./config";
-import WorkflowRoutes from "./routes/WorkflowRoutes";
+import { WorkflowRouter } from "./routes";
 
 const app: Express = express();
 
@@ -25,7 +25,7 @@ const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-app.use("/api/workflows", WorkflowRoutes);
+app.use("/api/workflows", WorkflowRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
